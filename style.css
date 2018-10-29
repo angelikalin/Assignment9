@@ -1,0 +1,30 @@
+
+
+button{
+	width: 100px;
+	height: 40px;
+	background-color: black;
+	color: white;
+	display: inline-block;
+}
+
+div.body{
+	height: 1000px;
+	width: 100%;
+
+}
+
+img{
+	opacity: .5;
+	display: inline-block;
+	height: 500px;
+	width: auto;
+}
+.a9{
+	width: 200px;
+	height: 200px;
+	background-color: black;
+	margin: 20px;
+	display: inline-block;
+	border-radius: 3px;
+}

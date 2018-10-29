@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>assignment 9</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	 
+	</head>
+	<body>
+     
+	 
+ 
+
+				<h1>Hi</h1>
+				<h3 id="question"></h3>
+				<button class="answer" id="a"></button>
+				<button class="answer" id="b"></button>
+				<button class="answer" id="c"></button>
+				<h3 id="result"></h3>
+ 
+
+				<script>
+					var questions = [
+						"Whats spookier than a ghost?",
+						"How many skeletons are inside you?",
+						"What is that skeleton covered in?"
+					];
+					var answersA = [
+						"skeleton",
+						"0",
+						"mummy wrapper"
+					];
+					var answersB = [
+						"html/css",
+						"1",
+						"candy wrapper"
+					];
+					var answersC = [
+						"javascript",
+						"2",
+						"blood"
+					];
+					var correctAnswers = ["a", "b" ,"c"];
+					var totalScore = 0;
+					var questionCounter = 0;
+					setUpQuestions();
+					
+					document.getElementById("a").addEventListener("click", function(event) {
+						if(correctAnswers[questionCounter] == "a"){
+							document.getElementById("result").innerHTML = "correct!";
+							totalScore += 1;
+						}else{document.getElementById("result").innerHTML = "incorrect";};
+						questionCounter += 1;
+						setUpQuestions();
+					});
+					document.getElementById("b").addEventListener("click", function(event) {
+						if(correctAnswers[questionCounter] == "b"){
+							document.getElementById("result").innerHTML = "correct!";
+							totalScore += 1;
+						}else{document.getElementById("result").innerHTML = "incorrect";};
+						questionCounter += 1;
+						setUpQuestions();
+					});
+					document.getElementById("c").addEventListener("click", function(event) {
+						if(correctAnswers[questionCounter] == "c"){
+							document.getElementById("result").innerHTML = "correct!";
+							totalScore += 1;
+						}else{document.getElementById("result").innerHTML = "incorrect";};
+						questionCounter += 1;
+						setUpQuestions();
+					});
+					function setUpQuestions() {
+						if(questionCounter >= questions.length){
+							document.getElementById('question').innerHTML = "💀";
+							document.getElementById('a').innerHTML = "💀";
+							document.getElementById('b').innerHTML = "💀";
+							document.getElementById('c').innerHTML = "💀";
+							document.getElementById("score").innerHTML = totalScore;
+							document.getElementById("result").innerHTML = "you calcified";		
+						}else{
+							document.getElementById('question').innerHTML = questions[questionCounter];
+							document.getElementById('a').innerHTML = answersA[questionCounter];
+							document.getElementById('b').innerHTML = answersB[questionCounter];
+							document.getElementById('c').innerHTML = answersC[questionCounter];
+							document.getElementById("score").innerHTML = totalScore;
+						};
+					}
+					document.getElementById("reset").addEventListener("click", function(event) {
+						var div = document.getElementById('jack');
+						for(var i = 0; i < totalScore; i++){
+							div.innerHTML += '🎃';
+						}
+						questionCounter = 0;
+						totalScore = 0;
+						setUpQuestions();
+					});
+				</script>	
+
+			</article>
+			<aside class="aside aside-1"></aside>
+			<aside class="aside aside-2"></aside>
+			<footer class="footer"></footer>
+		</div>
+
+	</body>
+</html>
+ 

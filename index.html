@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HELLO</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script type="text/javascript">
+		var questions =["When is Halloween 2018", "What gives angelika the most headache now?","Which location in Japan has the craziest crowd for Halloween?"];
+		var answersA = ["Oct 31","HTML","Shinjuku"];
+		var answersB = ["Oct 26~Nov 2","CSS","Shibuya"];
+		var answersC = ["Nov 1","JavaScript","Ginza"];
+	</script>
+
+</head>
+<body>
+	<h1>Halloween Week bruh</h1>
+
+
+
+
+	<h4>Press any key to start</h4>
+
+	<h3 id="question"></h3>
+
+	<button id="A">HELLOW</button>
+	<button id="B"></button>
+	<button id="C"></button>
+
+	<h4 id="YEAH"></h4>
+
+	<script type="text/javascript">
+		var questionCounter=0;
+		document.addEventListener("keypress", function(event){
+			setUpQuestions();
+		});
+
+	document.getElementById("A").addEventListener("click", function(event){
+			document.getElementById("YEAH").innerHTML = "Please look up Fordham History!";
+			questionCounter +=1;
+			setUpQuestions();
+
+
+		document.getElementById("B").addEventListener("click", function(event){
+			document.getElementById("YEAH").innerHTML = "Please look up Fordham History!";
+			questionCounter +=1;
+			setUpQuestions();
+		})
+
+
+		document.getElementById("C").addEventListener("click", function(event){
+			document.getElementById("YEAH").innerHTML = "Please look up Fordham Hestory!!";
+			questionCounter +=1;
+			setUpQuestions();       
+		})
+
+
+		function setUpQuestions(){
+			document.getElementById('question').innerHTML = questions[questionCounter];
+
+			document.getElementById('A').innerHTML=answersA[questionCounter];
+			document.getElementById('B').innerHTML=answersB[questionCounter];
+			document.getElementById('C').innerHTML=answersC[questionCounter];
+		}
+	</script>
+
+
+
+
+
+</body>
+</html>
